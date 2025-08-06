@@ -38,7 +38,7 @@ cd ../mamba
 python setup.py install
 
 # Step 6: Install asmunet module
-cd ../nnUNet
+cd ../asmunet
 pip install -e .
 ```
 

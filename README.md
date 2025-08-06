@@ -36,3 +36,21 @@ python setup.py install
 # Step 5: Compile and install the mamba module
 cd ../mamba
 python setup.py install
+
+# Step 6: Install asmunet module
+cd ../nnUNet
+pip install -e .
+```
+
+
+## 📖 Citation
+
+If you find this work useful, please cite:
+
+```
+@article{xxx,
+  title     = {ASM-UNet: Adaptive Scan Mamba Integrating Group Commonalities and Individual Variations for Fine-Grained Segmentation},
+  author    = {Yuqun Yang et al.},
+  journal   = {xxx},
+  year      = {2025}
+}

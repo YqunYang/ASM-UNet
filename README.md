@@ -27,7 +27,7 @@ pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 \
 conda install -c conda-forge cudatoolkit-dev
 
 # Step 3: Install required Python packages
-pip install ninja==1.11.1.1 transformers==4.44.0 einops==0.8.0 packaging hiddenlayer IPython
+pip install ninja==1.11.1.1 transformers==4.44.0 einops==0.8.0 packaging
 
 # Step 4: Compile and install the causal-conv1d module
 cd causal-conv1d

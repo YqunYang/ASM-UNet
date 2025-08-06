@@ -11,6 +11,10 @@
 Follow the steps below to set up the environment for **ASM-UNet**:
 
 ```bash
+# Step 0: Clone the repository
+git clone https://github.com/YqunYang/ASM-UNet.git
+cd ASM-UNet
+
 # Step 1: Create and activate the conda environment
 conda create -n ASM_UNet python=3.9.19 -y
 conda activate ASM_UNet

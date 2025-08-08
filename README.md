@@ -91,7 +91,8 @@ If you find this work useful, please cite:
 
 ```bibtex
 @article{xxx,
-  title     = {ASM-UNet: Adaptive Scan Mamba Integrating Group Commonalities and Individual Variations for Fine-Grained Segmentation},
+  title     = {ASM-UNet: Adaptive Scan Mamba Integrating Group Commonalities and 
+               Individual Variations for Fine-Grained Segmentation},
   author    = {Yuqun Yang et al.},
   journal   = {xxx},
   year      = {2025}

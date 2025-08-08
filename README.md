@@ -85,6 +85,13 @@ predicited_set = "imagesTs"              # Dataset to predict (typically "images
 To customize these paths, you can modify the following file: `ASM-UNet/asmunet/nnunetv2/paths.py`. In this file,
 the original `nnUNet` configuration using *environment variables* has been *commented out* for convenience and flexibility.
 
+## ⚠️ Warnings
+1. Autocast Deprecation Warning: `/torch/utils/checkpoint.py: FutureWarning: torch.cpu.amp.autocast(args...)is deprecated.
+Please use torch.amp.autocast('cpu', args...)instead.`
+Solution: Update the calls in checkpoint.py (verified working fix) or safely ignore (backwards compatible).
+2. Symbolic Shapes Initialization Warnings: rank1]:W0807 ... symbolic_shapes.py:4449] [0/0] xindex is not in var_ranges, defaulting to unknown range.
+Safely ignore - only appears during first epoch compilation
+
 ## 📖 Citation
 
 If you find this work useful, please cite:

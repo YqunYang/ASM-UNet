@@ -6,7 +6,7 @@
 
 ---
 
-## 📦 Installation
+## ⚙️ Installation
 
 Follow the steps below to set up the environment for **ASM-UNet**:
 
@@ -27,7 +27,7 @@ pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 \
 conda install -c conda-forge cudatoolkit-dev
 
 # Step 3: Install required Python packages
-pip install ninja==1.11.1.1 transformers==4.44.0 einops==0.8.0 packaging
+pip install ninja==1.11.1.1 transformers==4.44.0 einops==0.8.0 acvl-utils==0.2 packaging
 
 # Step 4: Compile and install the causal-conv1d module
 cd causal-conv1d
@@ -42,6 +42,48 @@ cd ../asmunet
 pip install -e .
 ```
 
+## 📁 Data Preparation
+```bash
+# Step 0: Download and unzip the BTMS dataset
+wget [Dataset Link]
+unzip Dataset001_BTMS.zip
+
+# Step 1: Move the dataset to nnUNet_raw
+mv Dataset001_BTMS/ ASM-UNet/data/nnUNet_raw/
+
+# Step 2: Preprocess using nnUNetv2
+nnUNetv2_plan_and_preprocess -d 1 --verify_dataset_integrity
+```
+
+## 🚀 Model Training
+```bash
+# Train with single-GPU
+nnUNetv2_train 1 3d_fullres all -tr nnUNetTrainer_asmunet
+
+# Train with multi-GPUs (example: 2 GPUs)
+CUDA_VISIBLE_DEVICES=0,1 nnUNetv2_train 1 3d_fullres all -tr nnUNetTrainer_asmunet -num_gpus 2
+```
+
+## 🖥️ Inference and Evaluation
+You can perform inference and compute Dice scores using the Jupyter notebook:  
+📓 `Pred_and_Eval_ASM_UNet.ipynb`
+
+Within the notebook, the following parameters can be configured for evaluation:
+```python
+Dataset_ID = 1                           # ID of the dataset
+fold = "all"                             # Use "all" or a specific fold (e.g., "1")
+use_gpu = "2"                            # GPU ID to be used
+tr = "nnUNetTrainer_asmunet"             # Trainer name
+checkpoint_name = "checkpoint_best.pth"  # Or "checkpoint_latest.pth"
+predicited_set = "imagesTs"              # Dataset to predict (typically "imagesTs")
+
+
+## 📌 Notes
+1. Replace 1 with your actual dataset ID if different.
+2. For large datasets, use multi-GPU training for faster convergence.
+3. By default, the paths for `nnUNet_raw`, `nnUNet_preprocessed`, and `nnUNet_results` are located under: `ASM-UNet/data/`.
+To customize these paths, you can modify the following file: `ASM-UNet/asmunet/nnunetv2/paths.py`. In this file,
+the original `nnUNet` configuration using *environment variables* has been *commented out* for convenience and flexibility.
 
 ## 📖 Citation
 

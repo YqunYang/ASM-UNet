@@ -76,7 +76,7 @@ use_gpu = "2"                            # GPU ID to be used
 tr = "nnUNetTrainer_asmunet"             # Trainer name
 checkpoint_name = "checkpoint_best.pth"  # Or "checkpoint_latest.pth"
 predicited_set = "imagesTs"              # Dataset to predict (typically "imagesTs")
-
+```
 
 ## 📌 Notes
 1. Replace 1 with your actual dataset ID if different.

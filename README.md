@@ -97,3 +97,13 @@ If you find this work useful, please cite:
   journal   = {xxx},
   year      = {2025}
 }
+```
+## 🎉 Acknowledgements
+We would like to express our sincere thanks to the following open-source projects that made this work possible:
+
+-  [**nnUNet**](https://github.com/MIC-DKFZ/nnUNet/tree/master): A robust framework for medical image segmentation.
+-  [**Mamba**](https://github.com/state-spaces/mamba): State Space Models for efficient sequence modeling.
+-  [**causal-conv1d**](https://github.com/Dao-AILab/causal-conv1d): Efficient implementation of causal 1D convolutions.
+
+Their contributions to the research community are truly appreciated.
+

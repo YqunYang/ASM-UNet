@@ -7,7 +7,7 @@
 
 ---
 
-## ⚙️ Installation
+## ⚙️ 1. Installation
 
 Follow the steps below to set up the environment for **ASM-UNet**:
 
@@ -43,7 +43,7 @@ cd ../asmunet
 pip install -e .
 ```
 
-## 📁 Data Preparation
+## 📁 2. Data Preparation
 ```bash
 # Step 0: Download and unzip the BTMS dataset
 wget [Dataset Link]
@@ -75,7 +75,7 @@ When `if_lmls` is set to True, GPU memory usage will be reduced at the cost of i
     )
 ```
 
-## 🖥️ Inference and Evaluation
+## 🖥️ 3. Inference and Evaluation
 **Method 1**: You can perform inference and compute Dice scores using the Jupyter notebook:  
 📓 `Pred_and_Eval_ASM_UNet.ipynb`
 Within the notebook, the following parameters can be configured for evaluation:
@@ -98,7 +98,6 @@ python Pred_and_Eval_ASM_UNet.py \
     --checkpoint_name checkpoint_best.pth \
     --predicited_set imagesTs
 ```
-
 
 
 ## 📌 Notes

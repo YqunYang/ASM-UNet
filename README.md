@@ -65,9 +65,8 @@ CUDA_VISIBLE_DEVICES=0,1 nnUNetv2_train 1 3d_fullres all -tr nnUNetTrainer_asmun
 ```
 
 ## 🖥️ Inference and Evaluation
-You can perform inference and compute Dice scores using the Jupyter notebook:  
+**Method 1**: You can perform inference and compute Dice scores using the Jupyter notebook:  
 📓 `Pred_and_Eval_ASM_UNet.ipynb`
-
 Within the notebook, the following parameters can be configured for evaluation:
 ```python
 Dataset_ID = 1                           # ID of the dataset
@@ -77,6 +76,19 @@ tr = "nnUNetTrainer_asmunet"             # Trainer name
 checkpoint_name = "checkpoint_best.pth"  # Or "checkpoint_latest.pth"
 predicited_set = "imagesTs"              # Dataset to predict (typically "imagesTs")
 ```
+
+**Method 2**: Alternatively, you can run the 📓 Pred_and_Eval_ASM_UNet.py file to accomplish the same task:
+```bash
+python Pred_and_Eval_ASM_UNet.py \
+    --Dataset_ID 1 \
+    --fold all \
+    --use_gpu 0 \
+    --tr nnUNetTrainer_asmunet \
+    --checkpoint_name checkpoint_best.pth \
+    --predicited_set imagesTs
+```
+
+
 
 ## 📌 Notes
 1. Replace 1 with your actual dataset ID if different.

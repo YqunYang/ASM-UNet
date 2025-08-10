@@ -65,6 +65,16 @@ nnUNetv2_train 1 3d_fullres all -tr nnUNetTrainer_asmunet
 CUDA_VISIBLE_DEVICES=0,1 nnUNetv2_train 1 3d_fullres all -tr nnUNetTrainer_asmunet -num_gpus 2
 ```
 
+#### (Optional) Solution for Limited GPU Memory
+In the file `nnUNetTrainer_asmunet.py`, we provide an optional parameter `if_lmls` to handle cases where GPU memory is insufficient.
+When `if_lmls` is set to True, GPU memory usage will be reduced at the cost of increased runtime.
+```python
+    def build_network_architecture(
+        ...
+        if_lmls: bool = True
+    )
+```
+
 ## 🖥️ Inference and Evaluation
 **Method 1**: You can perform inference and compute Dice scores using the Jupyter notebook:  
 📓 `Pred_and_Eval_ASM_UNet.ipynb`

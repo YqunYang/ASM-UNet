@@ -2,9 +2,8 @@
 
 **Paper**: *ASM-UNet: Adaptive Scan Mamba Integrating Group Commonalities and Individual Variations for Fine-Grained Segmentation*  
 **Paper Link**: *[Coming Soon]*  
-**Dataset Link**: *[Coming Soon]*
-**Version Note**: This is the tested version of the code, which runs normally but differs slightly from the final release. 
-The final version will be made available once the paper is accepted.
+**Dataset Link**: *[Coming Soon]*  
+**Version Note**: *This is the tested version of the code, which runs normally but differs slightly from the final release. The final version will be made available once the paper is accepted.*
 
 ---
 

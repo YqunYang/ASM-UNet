@@ -56,7 +56,7 @@ mv Dataset001_BTMS/ ASM-UNet/data/nnUNet_raw/
 nnUNetv2_plan_and_preprocess -d 1 --verify_dataset_integrity
 ```
 
-## 🚀 Model Training
+## 🚀 3. Model Training
 ```bash
 # Train with single-GPU
 nnUNetv2_train 1 3d_fullres all -tr nnUNetTrainer_asmunet
@@ -75,7 +75,7 @@ When `if_lmls` is set to True, GPU memory usage will be reduced at the cost of i
     )
 ```
 
-## 🖥️ 3. Inference and Evaluation
+## 🖥️ 4. Inference and Evaluation
 **Method 1**: You can perform inference and compute Dice scores using the Jupyter notebook:  
 📓 `Pred_and_Eval_ASM_UNet.ipynb`
 Within the notebook, the following parameters can be configured for evaluation:

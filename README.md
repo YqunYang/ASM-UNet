@@ -122,12 +122,14 @@ Safely ignore - only appears during first epoch compilation
 If you find this work useful, please cite:
 
 ```bibtex
-@article{xxx,
-  title     = {ASM-UNet: Adaptive Scan Mamba Integrating Group Commonalities and 
-               Individual Variations for Fine-Grained Segmentation},
-  author    = {Yuqun Yang et al.},
-  journal   = {xxx},
-  year      = {2025}
+@misc{wang2025asmunetadaptivescanmamba,
+      title={ASM-UNet: Adaptive Scan Mamba Integrating Group Commonalities and Individual Variations for Fine-Grained Segmentation}, 
+      author={Bo Wang and Mengyuan Xu and Yue Yan and Yuqun Yang and Kechen Shu and Wei Ping and Xu Tang and Wei Jiang and Zheng You},
+      year={2025},
+      eprint={2508.07237},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2508.07237}, 
 }
 ```
 ## 🎉 Acknowledgements

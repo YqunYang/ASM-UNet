@@ -5,6 +5,10 @@
 **Dataset Link**: *[Available after paper acceptance]*  
 **Version Note**: *This is the tested version of the code, which runs normally but differs slightly from the final release. The final version will be made available once the paper is accepted.*
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8b85ebf7-307e-4eda-b5d5-fd89db8db4aa" alt="image" width="54%">
+  <img src="https://github.com/user-attachments/assets/9f72f0ec-4c25-4c8e-95a8-a6bbd414d401" alt="image" width="44%">
+</p>
 ---
 
 ## ⚙️ 1. Installation
@@ -75,7 +79,7 @@ When `if_lmls` is set to True, GPU memory usage will be reduced at the cost of i
     )
 ```
 #### (Optional 2) Other Optional Trainers
-You may also choose to use the alternative trainers `nnUNetTrainer_asmunet_dec` and `nnUNetTrainer_asmunet_enc`, which apply the ASM module in the decoder and encoder, respectively.
+You may also choose to use the alternative trainer `nnUNetTrainer_asmunet_enc`, which apply the ASM module in the encoder.
 
 
 ## 🖥️ 4. Inference and Evaluation
